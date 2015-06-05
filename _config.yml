@@ -2,6 +2,29 @@ markdown: kramdown
 markdown_ext: md
 safe: true
 highlighter: pygments
+
+# navigation
+scenarios:
+  - authentication
+  - reservation
+  - client-side_apps
+  - server_apps
+  - client_+_server_apps
+endpoints:
+  - user_get
+  - user_patch
+  - journey_get
+  - journey_create
+  - journey_estimate
+  - journey_state
+  - journey_active
+reference:
+  - intro
+  - localization
+  - rate_limits
+  - requests
+  - responses
+
 # baseurl: "http://maximobility.github.io/cabify_developer"
 baseurl: ""
 sass:

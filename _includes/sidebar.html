@@ -1,57 +1,34 @@
+
+{% assign current = page.url | downcase | split: '/' %}
+
 <div class="col-md-3 relative">
   <div class="bs-docs-sidebar boxed fixed">
+  {{site.enpoints}}
     <ul class="nav-stacked">
       <li>
-        <a href="#endpoints" class="nav-title">Scenarios</a>
+        <a href="/scenarios/" class="nav-title-group">
+          <div class="nav-title">Scenarios</div> 
+          <div class="nav-subtitle">Common use cases of the Cabify API</div>
+        </a>
         <ul class="nav">
-          <li>
-            <a href="#user_get">User Get</a>
-            <li><a href="/authentication.html">Authentication</a></li>
-            <li><a href="/authentication.html">Client-side Apps</a></li>
-            <li><a href="/authentication.html">Server Apps</a></li>
-            <li><a href="/authentication.html">Client + Server Apps</a></li>
-          </li>
+          {% for scenario in site.scenarios %}
+            <li><a href="/scenarios/{{scenario}}/" {% if current[2] == scenario %}class="active"{% endif %}>
+                {{scenario | replace:'_',' ' | capitalize}}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
-        <a href="#endpoints" class="nav-title">Endpoints</a>
+        <a href="/endpoints" class="nav-title-group">
+          <div class="nav-title">Endpoints</div> 
+          <div class="nav-subtitle">How to access Cabify's REST API</div>
+        </a>
         <ul class="nav">
-          <li>
-            <a href="#user_get">User Get</a>
-          </li>
-          <li>
-            <a href="#user_patch">Update Update</a>
-          </li>
-          <li>
-            <a href="#journey_get">Journey Get</a>
-          </li>
-          <li>
-            <a href="#journey_post">Journey Create</a>
-          </li>
-          <li>
-            <a href="#journey_estimate_post">Journey Estimate</a>
-          </li>
-          <li>
-            <a href="#journey_state_get">Journey State</a>
-          </li>
-          <li>
-            <a href="#journeys_active_get">Journey Active</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#api_reference"  class="nav-title">API reference</a>
-        <ul class="nav">
-          <li>
-            <a href="#reference_requests">Requests</a>
-          </li>
-          <li>
-            <a href="#reference_responses">Responses</a>
-          </li>
-          <li>
-            <a href="#reference_localization">Localization</a>
-          </li>
-          <li>
-            <a href="#reference_rate_limits">Rate limits</a>
-          </li>
+          {% for endpoint in site.endpoints %}
+            <li><a href="/endpoints/{{endpoint}}/" {% if current[2] == endpoint %}class="active"{% endif %}>
+                {{endpoint | replace:'_',' ' | capitalize}}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </li>
     </ul>

@@ -7,14 +7,27 @@
 
 @import "vendor/pygments.sass"
 @import "vendor/bootstrap.scss"
+@import "app/fonts.css"
 
 $accent_color: #E5A517
+$background_color: #FAFAFA
 
 // GENERAL STYLES
 
+html
+  position: relative
+  min-height: 100%
+
 body 
-  background-color: #FAFAFA
-  font-family: 'Avenir Next', sans-serif
+  background-color: $background_color 
+  font-family: 'Lato', 'Avenir Next', sans-serif
+  font-size: 15px
+  line-height: 1.6
+  color: #555
+  margin-bottom: 60px
+
+h1, .h1, h2, .h2, h3, .h3
+  color: #111
 
 h2
   font-size: 15px
@@ -46,29 +59,61 @@ pre
   text-shadow: 0 1px 1px rgba(0,0,0,0.2)
   vertical-align: top
 
+.navbar-toggle
+  position: absolute
+  top: 4px
+  right: 0px
+
+.btn-etched:active
+  background-color: #f3f3f3
+
+.navbar-toggle.btn-etched .icon-bar
+  background-color: #666
+  text-shadow: 0 1px 1px white
+
 
 // SIDEBAR NAV
 
-.nav-title
-  text-transform: uppercase
-  background: rgba(0,0,0,0.05)
-  display: block
+.nav-title-group
   padding: 10px 15px
-  color: rgba(0,0,0,0.5)
-  font-size: 11px
-  font-weight: 500
+  border-bottom: solid rgba(0,0,0,0.1) 1px
+  margin: 15px 0
+  border-top: solid rgba(0,0,0,0.1) 1px
+  display: block
+  &:hover
+    text-decoration: none
+  &:first-child
+    margin-top: 0
+    border-top: none
 
-.nav>li>a
-  color: rgba(0,0,0,0.8)
-  font-weight: 500
-  border-radius: 0
+.nav-title
+  color: #222
+  text-transform: uppercase
+  font-weight: 600
+
+.nav-subtitle
+  color: #aaa
+  font-size: 13px
 
 ul.nav-stacked
   padding-left: 0
   list-style-type: none
 
+.nav>li>a
+  color: rgba(0,0,0,0.8)
+  font-weight: 500
+  border-radius: 0
+  font-size: 13px
+  padding-top: 7px
+  padding-bottom: 7px
+  font-weight: 500
+
 .nav>li>a:hover
   background-color: transparentize($accent_color, .9)
+
+.nav>li>a.active
+  background: lighten($accent_color, 10%)
+  font-weight: 600
 
 // CONTENT
 
@@ -77,16 +122,50 @@ ul.nav-stacked
   border: solid rgba(0,0,0,0.1) 1px
   border-radius: 4px
   margin-bottom: 20px
+  background-color: $background_color
+  
+  &.content
+    background: white
+    padding: 10px 30px
 
-.content.boxed
-  background: white
-  padding: 10px 30px
+  &.form
+    padding: 0 20px 20px 20px
 
 body .container-content
   margin-bottom: 80px
 
 .boxed .jumbotron
+  position: relative
   background-color: transparent
+  background: white url(/images/jumbotron_bg.jpg) 0 0 no-repeat
+  background-size: cover
+  border-radius: 4px
+  margin: -10px -30px
+  min-height: 510px
+  padding-bottom: 0
+
+  > *
+    position: relative
+    z-index: 2
+
+  h1
+    margin-top: 200px
+
+  &:after
+    content: ''
+    position: absolute
+    height: 80%
+    bottom: 0
+    left: 0
+    right: 0
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZzUyMyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBzdG9wLWNvbG9yPSJ3aGl0ZSIgc3RvcC1vcGFjaXR5PSIwIiBvZmZzZXQ9IjAiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZGRkZGIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzUyMykiIC8+PC9zdmc+)
+
+.boxed .boxed-title
+  border-bottom: solid rgba(0,0,0,0.1) 1px
+  font-weight: 600
+  font-size: 20px
+  margin: 0 -20px 20px -20px
+  padding: 20px
 
 // UI
 
@@ -96,11 +175,59 @@ body .container-content
   box-shadow: 0 1px 0 rgba(255,255,255,1), inset 0 1px 0 rgba(255,255,255,1)
   border-radius: 4px
 
+.nav > li > a.btn-etched
+  border-radius: 4px
+
+// Footer styles
+
+footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 60px
+
+  .container
+    border-top: solid rgba(0,0,0,0.1) 1px 
+    padding-top: 15px
+
+
+  ul, li
+    list-style-type: none
+    padding: 0
+    margin: 0
+
+  li
+    float: left
+    margin-right: 20px
+
+  ul.right
+    float: right
+    li
+      margin-right: 0
+      margin-left: 20px
+
+  a
+    color: #666
 
 // overrides
 
-.nav>li>a
+.jumbotron h1
+  font-weight: 600
+  letter-spacing: -1px
+
+.btn-lg, .btn-group-lg>.btn
   border-radius: 4px
+
+.btn-primary
+  font-weight: 600
+  background-color: #21252A
+  border-color: black 
+  color: $accent_color
+
+.btn-primary:hover
+  background-color: black
+  border-color: black
+  color: lighten($accent_color, 10%)
 
 .navbar-nav>li>a.btn-register
   padding-top: 10px
