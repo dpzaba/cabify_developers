@@ -10,7 +10,9 @@
 @import "app/fonts.css"
 
 $accent_color: #E5A517
+$complementary_color: #21252A
 $background_color: #FAFAFA
+
 
 // GENERAL STYLES
 
@@ -47,9 +49,10 @@ pre
 // TOP NAV
 
 .navbar-brand span
-  background: $accent_color
+  background: $complementary_color
   display: inline-block
-  color: white
+  font-family: sans-serif
+  color: $accent_color
   border-radius: 30px
   line-height: 26px
   text-transform: uppercase
@@ -137,7 +140,7 @@ body .container-content
 .boxed .jumbotron
   position: relative
   background-color: transparent
-  background: white url(/images/jumbotron_bg.jpg) 0 0 no-repeat
+  background: white url(/images/jumbotron_bg.jpg) 50% 100% no-repeat
   background-size: cover
   border-radius: 4px
   margin: -10px -30px
@@ -174,6 +177,11 @@ body .container-content
   background: transparent
   box-shadow: 0 1px 0 rgba(255,255,255,1), inset 0 1px 0 rgba(255,255,255,1)
   border-radius: 4px
+
+.btn-etched:hover,
+.nav > li > a.btn-etched:hover
+  background: #f6f6f6
+  border-color: rgba(0,0,0,0.2)
 
 .nav > li > a.btn-etched
   border-radius: 4px
@@ -220,7 +228,7 @@ footer
 
 .btn-primary
   font-weight: 600
-  background-color: #21252A
+  background-color: $complementary_color
   border-color: black 
   color: $accent_color
 
@@ -234,3 +242,15 @@ footer
   padding-bottom: 10px
   margin-top: 10px
   margin-right: 15px
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px)
+  .sidebar-nav
+    position: absolute
+    z-index: 10
+    top: 60px
+    right: 0
+    .bs-docs-sidebar
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1)
+  .navbar-nav
+    display: none
