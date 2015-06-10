@@ -1,8 +1,0 @@
-markdown: kramdown
-markdown_ext: md
-safe: true
-highlighter: pygments
-# baseurl: "http://maximobility.github.io/cabify_developer"
-baseurl: ""
-sass:
-  style: :compressed
