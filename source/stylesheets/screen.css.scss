@@ -79,6 +79,7 @@ html, body {
   background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
+  border-right: 1px solid $content-border-color;
 
   // language selector for mobile devices
   .lang-selector {
@@ -155,7 +156,7 @@ html, body {
   }
 
 
-  .tocify-item>a, .toc-footer li {
+  .tocify-item>a {
     padding: 0 $nav-padding 0 $nav-padding;
     display: block;
     overflow-x: hidden;
@@ -203,6 +204,10 @@ html, body {
     padding: 1em 0;
     margin-top: 1em;
     border-top: 1px solid $nav-footer-border-color;
+    // position: absolute;
+    // bottom: 0;
+    // width: 100%;
+    // height: 100px;
 
     li,a {
       color: $main-text;
@@ -212,9 +217,12 @@ html, body {
 
     a:hover {
       text-decoration: underline;
+      float:  left;
     }
 
     li {
+      display: inline;
+      padding-left: 30px;
       font-size: 0.8em;
       line-height: 1.7;
       text-decoration: none;
@@ -366,13 +374,9 @@ html, body {
     font-size: 30px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid $content-border-color;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ddd;
-    @include background-image(
-      linear-gradient(top, #fff, #f9f9f9)
-    );
   }
 
   h1:first-child, div:first-child + h1 {
@@ -385,7 +389,7 @@ html, body {
     font-size: 20px;
     margin-top: 4em;
     margin-bottom: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $content-border-color;
     padding-top: 1.2em;
     padding-bottom: 1.2em;
     @include background-image(
