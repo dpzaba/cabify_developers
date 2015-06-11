@@ -12,11 +12,11 @@ toc_footers:
 
 includes:
   ## Scenarios
-  - scenarios/overview
-  - scenarios/authentication
+  #- scenarios/overview
+  #- scenarios/authentication
   # - scenarios/reservation
   ## Resources
-  - resources/authorization
+  #- resources/authorization
   - resources/journey
   #- resources/journey_list
   ## About
