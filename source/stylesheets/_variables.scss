@@ -43,6 +43,7 @@ $search-notice-bg: #c97a7e;
 // TEXT COLORS
 ////////////////////
 $main-text: #656565; // main content text color
+$heading-text: #191A2D;
 $nav-text: #323232;
 $nav-subitem-text: #646492;
 $nav-active-text: #323232;
@@ -70,7 +71,7 @@ $phone-width: $tablet-width - $nav-width; // min width before reverting to mobil
 // FONTS
 ////////////////////
 %default-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
 
