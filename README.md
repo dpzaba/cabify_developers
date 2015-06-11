@@ -6,7 +6,7 @@ This is a middelman app using [slate](https://github.com/tripit/slate) for Cabif
 ### Install and run it
 ```bash
 bundle install
-bundle exec middleman server
+bundle exec middleman server --force-polling
 ```
 
 Or use the included Dockerfile! (must install Docker first)
