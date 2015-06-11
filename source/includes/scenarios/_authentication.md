@@ -56,8 +56,8 @@ Requests for an authorization object should be sent as a POST request to the Cab
 
 Requests should be sent with the following data:
 
- * a HTTP Basic Authorization header from your `client_id` and `secret` keys, and,
- * a web form encoded parameter list in the post body including the `grant_type` set to `password`, a `username` parameter with your Cabify email address, and `password` set to your account's password.
+ * An HTTP Basic Authorization header from your `client_id` and `secret` keys, and,
+ * A web form encoded parameter list in the post body including the `grant_type` set to `password`, a `username` parameter with your Cabify email address, and `password` set to your account's password.
 
 If the request fails, you'll receive a `401 Unauthorized` response including a JSON encoded error message as defined by the OAuth 2.0 RFC:
 

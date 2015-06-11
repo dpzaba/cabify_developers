@@ -12,23 +12,25 @@ Access to the API is only permitted via HTTPS to the `cabify.com` domain. All da
 
 All requests to the API include the `/api` path. Any URL that does not include this is likely to be related to a web site that may be visited by a user using a browser.
 
-Any properties that end in an `_at` suffix will be provided in ISO 8601 format in UTC including milliseconds:
+Any properties that end in an `_at` suffix will be provided in ISO 8601 format in UTC including milliseconds: 
 
-~~~
-YYYY-MM-DDTHH:MM:SS.mmmZ
-~~~
+`YYYY-MM-DDTHH:MM:SS.mmmZ`
 
 Some resources also provide dates in a local time zone in addition to a regular timestamp. These properties typically end in `in_time_zone` or just `in_tz`.
 
-~~~
-2012-05-09T13:11:45.000+02:00
-~~~
+`2012-05-09T13:11:45.000+02:00`
 
 #### Authentication
 
 The Cabify API utilizes OAuth 2.0 authentication. For more details, see the [Authentication page](authentication.html).
 
 #### REST and Resources
+
+>Each resource path may contain an ID parameter on the end. For example:
+
+~~~bash
+GET /api/journeys/09e1bc6081256de35996c69e24435f6f
+~~~
 
 The complete Cabify API follows strict REST concepts of resources. A resource is an end-point or URL path on which JSON documents can be created, retrieved, updated, and destroyed using HTTP commands.
 
@@ -57,34 +59,24 @@ The following table describes how the different HTTP actions correspond to activ
   </tbody>
 </table>
 
-Each resource path may contain an ID parameter on the end. For example:
-
-~~~
-GET /api/journeys/09e1bc6081256de35996c69e24435f6f
-~~~
-
 Actions that fetch, modify or replace a resource such as GET, PUT, PATCH and DELETE typically require an id parameter to be present. Exceptions exist for resources that are unique to the user's connection and will be clearly defined in the documentation.
 
 The Cabify API does not distinguish collections and single items, each are considered independent resources. The following examples are all independent resources:
 
-~~~
-GET /api/journey/09e1bc6081256de35996c69e24435f6f
-GET /api/journeys
-GET /api/regions
-~~~
+- `GET /api/journey/09e1bc6081256de35996c69e24435f6f`
+- `GET /api/journeys`
+- `GET /api/regions`
 
 To determine the actions that a specific resource supports, you can send an HTTP OPTIONS to the resource URL:
 
-{% highlight bash %}
-$ curl -i -X OPTIONS -H "Authentication: ------" https://cabify.com/api/journey
-{% endhighlight %}
+`$ curl -i -X OPTIONS -H "Authentication: ------" https://cabify.com/api/journey`
 
-The response headers should include:
+<aside class="notice">
+  The response headers should include:
 
-~~~
-HTTP/1.1 204 No Content
-Allow: GET, OPTIONS, PATCH, POST, PUT
-~~~
+  HTTP/1.1 204 No Content
+  Allow: GET, OPTIONS, PATCH, POST, PUT
+</aside>
 
 #### Error Handling
 

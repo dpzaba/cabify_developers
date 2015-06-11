@@ -94,10 +94,12 @@ html, body {
   // This is the logo at the top of the ToC
   &>img {
     display: block;
+    margin: 10px 0 0 25px;
   }
 
   &>.search {
     position: relative;
+    margin-bottom: 10px;
 
     input {
       background: $nav-bg;
@@ -217,10 +219,10 @@ html, body {
     padding: 1em 0;
     margin-top: 1em;
     border-top: 1px solid $nav-footer-border-color;
-    // position: absolute;
-    // bottom: 0;
-    // width: 100%;
-    // height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     li,a {
       color: $main-text;
@@ -230,7 +232,6 @@ html, body {
 
     a:hover {
       text-decoration: underline;
-      float:  left;
     }
 
     li {
@@ -240,6 +241,11 @@ html, body {
       line-height: 1.7;
       text-decoration: none;
     }
+
+    li img {
+      vertical-align: middle;
+    }
+
   }
 
 }
@@ -385,8 +391,8 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 30px;
-    padding-top: 0.5em;
+    font-size: 36px;
+    padding-top: 1em;
     padding-bottom: 0.5em;
     border-top: 1px solid $content-border-color;
     margin-bottom: $h1-margin-bottom;
@@ -400,11 +406,11 @@ html, body {
 
   h2 {
     @extend %header-font;
-    font-size: 20px;
+    font-size: 30px;
     margin-top: 4em;
     margin-bottom: 0;
     border-top: 1px solid $content-border-color;
-    padding-top: 1.2em;
+    padding-top: 2em;
     padding-bottom: 1.2em;
     @include background-image(
       linear-gradient(top, rgba(#fff,0.4), rgba(#fff, 0))
@@ -445,10 +451,15 @@ html, body {
     margin: 1.5em 0 2em 0;
     overflow: auto;
     font-size: 13px;
+    width: 65%;
     th,td {
       text-align: left;
       vertical-align: top;
       line-height: 1.6;
+    }
+
+    code {
+      white-space: nowrap;
     }
 
     th {
@@ -533,8 +544,9 @@ html, body {
   }
 
   code {
-    background-color: rgba(0,0,0,0.05);
-    padding: 3px;
+    background-color: #EAE7E2;
+    color: darken($main-text, 10%);
+    padding: 3px 6px;
     border-radius: 3px;
     @extend %break-words;
     @extend %code-font;
@@ -543,6 +555,12 @@ html, body {
   pre>code {
     background-color: transparent;
     padding: 0;
+    color: #797979;
+  }
+
+  pre.shell > code, 
+  pre.plaintexts > code{
+    color: #aaa;
   }
 
   aside {
@@ -629,13 +647,12 @@ html, body {
   }
 
   blockquote {
+    background: transparent;
+  }
+
+  blockquote {
     &>p {
-      background-color: $code-annotation-bg;
-      border-radius: 5px;
-      padding: $code-annotation-padding;
       color: #ccc;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
     }
   }
 }
