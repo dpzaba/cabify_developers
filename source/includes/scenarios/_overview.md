@@ -1,16 +1,12 @@
----
-title: Cabify API Overview
----
-
-# Cabify API Overview
+# Scenarios of Cabify API - Overview
 
 This section describes the rules and general layout of the Cabify API. If you have any problems or requests, please contact our [development team](mailto:dev@cabify.com).
 
-## Current Version
+#### Current Version
 
 The Cabify API does not currently support API versioning. While the project is continually undergoing development, we try to avoid making breaking changes to API endpoints. If at some point in the future we introduce non-backwards compatible changes we will look at providing versioning details on a per-resource basis.
 
-## Schema
+#### Schema
 
 Access to the API is only permitted via HTTPS to the `cabify.com` domain. All data must be sent and received using JSON with the few notable exceptions of some OAuth authentication requests which accept regular web form data.
 
@@ -28,11 +24,11 @@ Some resources also provide dates in a local time zone in addition to a regular 
 2012-05-09T13:11:45.000+02:00
 ~~~
 
-## Authentication
+#### Authentication
 
 The Cabify API utilizes OAuth 2.0 authentication. For more details, see the [Authentication page](authentication.html).
 
-## REST and Resources
+#### REST and Resources
 
 The complete Cabify API follows strict REST concepts of resources. A resource is and end-point or URL path on which JSON documents can be created, retrieved, updated, and destroyed using HTTP commands.
 
@@ -88,11 +84,11 @@ HTTP/1.1 204 No Content
 Allow: GET, OPTIONS, PATCH, POST, PUT
 ~~~
 
-## Error Handling
+#### Error Handling
 
 All error handling via the Cabify API is handled using HTTP status codes. Anything other than a `200 OK` or `204 No Content` response should be considered an error. There are several scenarios in which errors may occur.
 
-### Syntax and Server Errors
+##### Syntax and Server Errors
 
 Syntax and server errors will return either a `400 Bad Request` or `50X` responses. Typically they will include a message body provided in text which should not be shown to the end user:
 
@@ -103,11 +99,11 @@ Content-Length: 22
 Problems parsing JSON.
 ~~~
 
-### Resource Not Found
+##### Resource Not Found
 
 If the server understands the request but no resource exists at the specific URL using the parameters or ID provided.
 
-### Forbidden
+##### Forbidden
 
 Requests that a syntactically valid or where the server is responding correctly but does not know how to deal with the request will attempt to return
 

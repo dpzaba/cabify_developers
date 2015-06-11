@@ -1,8 +1,4 @@
----
-title: Cabify Authentication
----
-
-# Authentication
+## Authentication
 
 Cabify uses [OAuth 2.0](http://oauth.net/2/) outlined in [RFC 6749](http://tools.ietf.org/html/rfc6749) to control access to resources on the server via the API.
 
@@ -17,7 +13,7 @@ The Cabify API has been designed with three application access scenarios in mind
 Each of these scenarios is covered in this page so you can pick the most appropriate for your situation.
 
 
-## Application Registration
+### Application Registration
 
 Before accessing the Cabify API, you must have first registered your application. At the moment we are only accepting new application requests via email, please [get in touch!](mailto:dev@cabify.com)
 
@@ -32,7 +28,7 @@ The details we require:
 Upon successful registration, you'll receive a `client_id` and `secret`. Depending on the grant type your application uses, you'll need to provide at least one of these fields when requesting authorisation of a user.
 
 
-## Scenario 1: Server Applications
+### Scenario 1: Server Applications
 
 If your application is only ever going to be used by yourself, a colleague, or a special Cabify user you created to act as an intermediary, there is no reason to code a full OAuth solution for external users.
 
@@ -46,7 +42,7 @@ The process is simple:
 
 **IMPORTANT NOTE**: *Due to potential security implications and unless agreed by Cabify, only the owner of the application defined during registration will be allowed to authenticate using the password grant type.*
 
-### Requesting an Authorization Object
+#### Requesting an Authorization Object
 
 Requests for an authorization object should be sent as a POST request to the Cabify API endpoint:
 
@@ -93,7 +89,7 @@ If successful, the http response will be `200 OK` and you should receive a respo
 
 The key fields to extract from the authentication object are the `token_type` and `access_token`, we recommend however that you store the entire object for future use.
 
-### Testing Authorization
+#### Testing Authorization
 
 Now that we have a token, the process of sending requests to the Cabify API is simple. All requests should include the token type and access token in the HTTP headers in the Authorization header:
 
@@ -109,10 +105,10 @@ $ curl -X GET -H "Authorization: Bearer 1IIwOxm_32LbIBbamnAg9pJtNstahPvNThkelKDU
 
 Assuming all okay, you should receive a `200 OK` response with the User's profile in JSON.
 
-## Scenario 2: Server + Client Applications
+### Scenario 2: Server + Client Applications
 
 TODO!
 
-## Scenario 3: User Agent Client-Side Applications
+### Scenario 3: User Agent Client-Side Applications
 
 TODO!

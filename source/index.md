@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Cabify API Reference
 
 language_tabs:
   - shell
@@ -11,18 +11,16 @@ toc_footers:
   - <a href='#'>Contact</a>
 
 includes:
-  ## Scenarios
-  #- scenarios/overview
-  #- scenarios/authentication
-  # - scenarios/reservation
-  ## Resources
-  #- resources/authorization
-  - resources/resources
-  - resources/journey
+  - scenarios/overview
+  - scenarios/authentication
+
+  - resources/overview
+  - resources/journeys/item
   - resources/user
-  #- resources/journey_list
-  ## About
-  #- about/company
+
+  - about/overview
+  - about/team
+  - about/scheme
 
 search: true
 ---
