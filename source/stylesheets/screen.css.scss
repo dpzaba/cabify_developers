@@ -441,8 +441,10 @@ html, body {
   }
 
   table {
-    margin-bottom: 1em;
+    border-collapse:separate;
+    margin: 1.5em 0 2em 0;
     overflow: auto;
+    font-size: 13px;
     th,td {
       text-align: left;
       vertical-align: top;
@@ -451,8 +453,9 @@ html, body {
 
     th {
       padding: 5px 10px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: $table-border;
       vertical-align: bottom;
+      color: $heading-text;
     }
 
     td {
@@ -460,7 +463,7 @@ html, body {
     }
 
     tr:last-child {
-      border-bottom: 1px solid #ccc;
+      border-bottom: $table-border;
     }
 
     tr:nth-child(odd)>td {
@@ -472,8 +475,48 @@ html, body {
     }
   }
 
+  table.vertical {
+    thead th {
+      text-transform: uppercase;
+      text-align: left;
+      border-radius: 4px 4px 0 0;
+      border: $table-border;
+    }
+
+    tbody th {
+      border: none;
+      border-left: $table-border;
+      text-align: right;
+      padding: 10px 30px 0 40px;
+    }
+
+    tbody td {
+      border-bottom: $table-border-dimmed;
+      padding: 10px 30px 10px 0;
+      &:last-child {
+        border-right: $table-border;
+      }
+    }
+
+    th, td {
+      background: white;
+      vertical-align: top;
+    }
+
+    tbody tr:last-child th {
+      border-radius: 0 0 0 4px;
+      border-bottom: $table-border;
+    }
+
+    tbody tr:last-child td {
+      border-radius: 0 0 4px 0;
+      border-bottom: $table-border;
+    }
+
+  }
+
   dt {
-    font-weight: bold;
+    font-weigdt: bold;
   }
 
   dd {

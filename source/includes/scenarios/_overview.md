@@ -30,27 +30,29 @@ The Cabify API utilizes OAuth 2.0 authentication. For more details, see the [Aut
 
 #### REST and Resources
 
-The complete Cabify API follows strict REST concepts of resources. A resource is and end-point or URL path on which JSON documents can be created, retrieved, updated, and destroyed using HTTP commands.
+The complete Cabify API follows strict REST concepts of resources. A resource is an end-point or URL path on which JSON documents can be created, retrieved, updated, and destroyed using HTTP commands.
 
 The following table describes how the different HTTP actions correspond to activity on a resource end-point:
 
-<table class="table">
+<table class="vertical">
   <thead>
-    <tr>
-      <th>GET</th>
-      <th>POST</th>
-      <th>PUT</th>
-      <th>PATCH</th>
-      <th>DELETE</th>
-    </tr>
+    <tr><th colspan="2">HTTP Actions</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td>Fetch a document</td>
-      <td>Create a new document without an ID</td>
-      <td>Replace or create a new document with a specific ID</td>
-      <td>Update a subset of existing document attributes</td>
-      <td>Destroy the document completely</td>
+      <th>GET</th><td>Fetch a document</td>
+    </tr>
+    <tr>
+      <th>POST</th><td>Create a new document without an ID</td>
+    </tr>
+    <tr>
+      <th>PUT</th><td>Replace or create a new document with a specific ID</td>
+    </tr>
+    <tr>
+      <th>PATCH</th><td>Update a subset of existing document attributes</td>
+    </tr>
+    <tr>
+      <th>DELETE</th><td>Destroy the document completely</td>
     </tr>
   </tbody>
 </table>
