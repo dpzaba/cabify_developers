@@ -71,12 +71,10 @@ To determine the actions that a specific resource supports, you can send an HTTP
 
 `$ curl -i -X OPTIONS -H "Authentication: ------" https://cabify.com/api/journey`
 
-<aside class="notice">
-  The response headers should include:
+The response headers should include:
 
-  HTTP/1.1 204 No Content
-  Allow: GET, OPTIONS, PATCH, POST, PUT
-</aside>
+`HTTP/1.1 204 No Content`
+`Allow: GET, OPTIONS, PATCH, POST, PUT`
 
 #### Error Handling
 
@@ -99,8 +97,4 @@ If the server understands the request but no resource exists at the specific URL
 
 ##### Forbidden
 
-Requests that a syntactically valid or where the server is responding correctly but does not know how to deal with the request will attempt to return
-
-~~~
-HTTP/1.1 403 Forbidden
-~~~
+Requests that a syntactically valid or where the server is responding correctly but does not know how to deal with the request will attempt to return `HTTP/1.1 403 Forbidden`
