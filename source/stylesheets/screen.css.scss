@@ -78,7 +78,7 @@ html, body {
   bottom: 0;
   width: $nav-width;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   border-right: 1px solid $content-border-color;
 
@@ -100,24 +100,29 @@ html, body {
     position: relative;
 
     input {
-      background: $main-bg;
+      background: $nav-bg;
       border: 1px solid $search-box-border-color;
-      border-radius: 10px;
+      border-radius: 30px;
       padding: 6px 0 6px 20px;
       @include box-sizing(border-box);
       margin: $nav-v-padding $nav-padding;
-      width: $nav-width - 30;
+      width: $nav-width - 50;
       outline: none;
       color: $nav-text;
+      &:focus {
+        background: white;
+      }
     }
 
     &:before {
       position: absolute;
-      top: 17px;
-      left: $nav-padding;
+      top: 18px;
+      right: 35px;
       color: $nav-text;
       @extend %icon-search;
+      opacity: 0.4;
     }
+
   }
 
   img+.tocify {
@@ -356,6 +361,7 @@ html, body {
 
   a {
     color: $content-link-text;
+    font-weight: bold;
   }
 
   &>h1, &>h2, &>h3, &>h4, &>h5, &>h6, &>p, &>table, &>ul, &>ol, &>aside, &>dl {
