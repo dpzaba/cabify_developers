@@ -17,7 +17,9 @@ includes:
   # - scenarios/reservation
   ## Resources
   #- resources/authorization
+  - resources/resources
   - resources/journey
+  - resources/user
   #- resources/journey_list
   ## About
   #- about/company

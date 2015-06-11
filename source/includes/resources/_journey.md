@@ -1,8 +1,4 @@
----
-title: Cabify Journey Resource
----
-
-# Journey Resource
+## Journey Resource
 
 ~~~
 https://cabify.com/api/journey
@@ -10,17 +6,17 @@ https://cabify.com/api/journey
 
 Create and fetch journeys resources.
 
-## Actions
+### Actions
 
  * `POST` - create a new journey without an uuid
  * `PUT` - create a new journey with a uuid
  * `GET` - fetch the details of a journey
 
-## Authentication
+### Authentication
 
 Only logged in users will be allowed to request a journey. The owner will always be taken from the currently logged in user, but journeys can be requested for _anonymous_ riders and other riders with a user in the same account.
 
-## Creating a journey
+### Creating a journey
 
 There are two ways of creating a new journey:
 
@@ -134,4 +130,4 @@ The request body should be provided as JSON and using a combination of the follo
 
 
 
-## Response
+### Response
