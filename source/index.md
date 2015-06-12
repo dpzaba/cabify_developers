@@ -14,6 +14,7 @@ includes:
   - about/intro
   - about/team
   - about/schema
+  - about/error_handling
 
   - resources/overview
   - resources/journeys/item
