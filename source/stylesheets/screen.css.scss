@@ -190,20 +190,24 @@ html, body {
   // Subheaders are the submenus that slide open
   // in the table of contents.
   .tocify-subheader {
+    display: none;
+
     .tocify-item>a {
       // Styling here for a level 2 nesting.
-      padding-left: $nav-padding + $nav-indent * 1;
       font-size: 12px;
+      padding-left: $nav-padding + $nav-indent * 1;
     }
   }
 
   .tocify-subheader {
+    display: none;
+
     .tocify-subheader {
       .tocify-item>a {
         // Styling here for a level 3 nesting.
-        padding-left: $nav-padding + $nav-indent * 2;
         font-size: 12px;
-      }
+        padding-left: $nav-padding + $nav-indent * 2;
+       }
     }
   }
 
@@ -211,10 +215,6 @@ html, body {
     padding: 1em 0;
     margin-top: 1em;
     border-top: 1px solid $nav-footer-border-color;
-    // position: absolute;
-    // bottom: 0;
-    // width: 100%;
-    // height: 100px;
 
     li,a {
       color: $main-text;
