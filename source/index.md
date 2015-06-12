@@ -17,7 +17,8 @@ includes:
 
   - resources/overview
   - resources/journeys/item
-  - resources/user
+  - resources/users/overview
+  - resources/users/item
 
   - scenarios/overview
   - scenarios/authentication
