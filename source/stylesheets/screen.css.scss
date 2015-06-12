@@ -455,7 +455,7 @@ html, body {
     margin: 1.5em 0 2em 0;
     overflow: auto;
     font-size: 13px;
-    width: 65%;
+    width: 50%;
     th,td {
       text-align: left;
       vertical-align: top;
@@ -503,6 +503,11 @@ html, body {
       border-left: $table-border;
       text-align: right;
       padding: 10px 30px 0 40px;
+
+      .optional, .type {
+        color: $table-th-subtitle;
+        display: block;
+      }
     }
 
     tbody td {
