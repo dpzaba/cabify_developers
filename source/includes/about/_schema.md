@@ -67,6 +67,11 @@ The Cabify API does not distinguish collections and single items, each are consi
 
 ~~~bash
 $ curl -i -X OPTIONS https://cabify.com/api/journey/estimate
+~~~
+
+> Response:
+
+~~~
 HTTP/1.1 204 No Content
 Allow: POST, OPTIONS
 ~~~
