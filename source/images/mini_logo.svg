@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="35px" viewBox="0 0 25 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Logo" sketch:type="MSLayerGroup">
+            <path d="M14.7248186,0.148115858 C7.05146972,0.148115858 0.832963674,6.3713886 0.832963674,14.0444333 C0.832963674,17.8524021 2.36795256,21.2954731 4.84924053,23.8039861 C4.86784606,23.8227958 4.88407825,23.8432949 4.90279088,23.861999 L14.6668057,34.5051326 L24.2478573,24.1833011 C24.3541512,24.0752236 24.4586015,23.9653412 24.5602344,23.8530739 L24.5557647,23.8530739 L24.5602344,23.8486042 L22.9804988,22.2777937 C20.8697322,24.3937483 17.9501781,25.7050167 14.7248186,25.7050167 C8.28509004,25.7050167 3.06422859,20.4835454 3.06422859,14.0444262 C3.06422859,7.60439202 8.28509004,2.38383617 14.7248186,2.38383617 C17.944379,2.38383617 20.8614183,3.68782165 22.9715738,5.79767149 L24.5513093,4.21793593 C22.036763,1.70369378 18.5611891,0.148108718 14.7248186,0.148108718 L14.7248186,0.148115858 Z" id="path22" fill-opacity="0.8" fill="#000000" sketch:type="MSShapeGroup"></path>
+            <ellipse id="circle31" fill="#E5A517" sketch:type="MSShapeGroup" cx="14.6984184" cy="14.1563644" rx="5.44019842" ry="5.44019842"></ellipse>
+        </g>
+    </g>
+</svg>

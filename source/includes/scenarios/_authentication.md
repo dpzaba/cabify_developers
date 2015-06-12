@@ -44,22 +44,20 @@ The process is simple:
 
 #### Requesting an Authorization Object
 
+> Here is an example sent from the command line using cURL:
+
+~~~bash
+$ curl -X POST -H "Authorization: Basic YmNkYzEyMzdkYzUzNDM0YTg5M2M2ZWY0NGZiMjVmNGE6aFJoMXIxMXhaZDZTd3NlMG5zOGtjUQ==" -d "grant_type=password&username=sam@cabify.com&password=cabifyftw" https://cabify.com/api/authorization
+~~~
+
 Requests for an authorization object should be sent as a POST request to the Cabify API endpoint:
 
-~~~
-https://cabify.com/api/authorization
-~~~
+`https://cabify.com/api/authorization`
 
 Requests should be sent with the following data:
 
- * a HTTP Basic Authorization header from your `client_id` and `secret` keys, and,
- * a web form encoded parameter list in the post body including the `grant_type` set to `password`, a `username` parameter with your Cabify email address, and `password` set to your account's password.
-
-Here is an example sent from the command line using cURL:
-
-{% highlight bash %}
-$ curl -X POST -H "Authorization: Basic YmNkYzEyMzdkYzUzNDM0YTg5M2M2ZWY0NGZiMjVmNGE6aFJoMXIxMXhaZDZTd3NlMG5zOGtjUQ==" -d "grant_type=password&username=sam@cabify.com&password=cabifyftw" https://cabify.com/api/authorization
-{% endhighlight %}
+ * An HTTP Basic Authorization header from your `client_id` and `secret` keys, and,
+ * A web form encoded parameter list in the post body including the `grant_type` set to `password`, a `username` parameter with your Cabify email address, and `password` set to your account's password.
 
 If the request fails, you'll receive a `401 Unauthorized` response including a JSON encoded error message as defined by the OAuth 2.0 RFC:
 
@@ -69,7 +67,7 @@ If the request fails, you'll receive a `401 Unauthorized` response including a J
 
 If successful, the http response will be `200 OK` and you should receive a response similar to:
 
-{% highlight json %}
+~~~json
 {
   "_id": "b855493a18275c4a512c52bab043d914",
   "token_type": "Bearer",
@@ -85,7 +83,7 @@ If successful, the http response will be `200 OK` and you should receive a respo
   "created_at": "2014-11-17T14:27:33.731Z",
   "updated_at": "2014-11-17T14:27:33.731Z"
 }
-{% endhighlight %}
+~~~
 
 The key fields to extract from the authentication object are the `token_type` and `access_token`, we recommend however that you store the entire object for future use.
 
