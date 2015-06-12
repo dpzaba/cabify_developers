@@ -57,7 +57,7 @@ The following table describes how the different HTTP actions correspond to activ
   </tbody>
 </table>
 
-Actions that fetch, modify or replace a resource such as GET, PUT, PATCH and DELETE typically require an id parameter to be present. Exceptions exist for resources that are unique to the user's connection and will be clearly defined in the documentation.
+Actions that fetch, modify or replace a resource such as GET, PUT, PATCH and DELETE typically require an id parameter to be present. Exceptions exist for resources that are unique to the currently authorised user and will be clearly defined in the documentation.
 
 The Cabify API does not distinguish collections and single items, each are considered independent resources. The following examples are all independent resources:
 
@@ -66,40 +66,15 @@ The Cabify API does not distinguish collections and single items, each are consi
 - `GET /api/regions`
 
 ~~~bash
-$ curl -i -X OPTIONS -H "Authentication: ------" \
-https://cabify.com/api/journey
-
-`HTTP/1.1 204 No Content`
-`Allow: GET, OPTIONS, PATCH, POST, PUT`
+$ curl -i -X OPTIONS https://cabify.com/api/journey/estimate
 ~~~
 
-To determine the actions that a specific resource supports, you can send an HTTP OPTIONS to the resource URL.
+> Response:
 
-### Error Handling
-
-All error handling via the Cabify API is handled using HTTP status codes. Anything other than a `200 OK` or `204 No Content` response should be considered an error. There are several scenarios in which errors may occur.
-
-#### Syntax and Server Errors
-
-~~~bash
-HTTP/1.1 400 Bad Request
-Content-Length: 22
-
-Problems parsing JSON.
+~~~
+HTTP/1.1 204 No Content
+Allow: POST, OPTIONS
 ~~~
 
-Syntax and server errors will return either a `400 Bad Request` or `50X` responses. Typically they will include a message body provided in text which should not be shown to the end user:
+To determine the actions that a specific resource supports, you can send an HTTP OPTIONS request to the resource URL.
 
-### Resource Not Found
-~~~bash
-HTTP/1.1 400 Bad Request
-Content-Length: 22
-
-Problems parsing JSON.
-~~~
-
-If the server understands the request but no resource exists at the specific URL using the parameters or ID provided.
-
-#### Forbidden
-
-Requests that a syntactically valid or where the server is responding correctly but does not know how to deal with the request will attempt to return `HTTP/1.1 403 Forbidden`
