@@ -11,16 +11,16 @@ toc_footers:
   - <a href='#'>Contact</a>
 
 includes:
-  - scenarios/overview
-  - scenarios/authentication
+  - about/intro
+  - about/team
+  - about/schema
 
   - resources/overview
   - resources/journeys/item
   - resources/user
 
-  - about/overview
-  - about/team
-  - about/scheme
+  - scenarios/overview
+  - scenarios/authentication
 
 search: true
 ---
