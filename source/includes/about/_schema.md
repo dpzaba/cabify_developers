@@ -12,7 +12,7 @@ The Cabify API does not currently support API versioning. While the project is c
 
 ### Time
 
-Any properties that end in an `_at` suffix will be provided in ISO 8601 format in UTC including milliseconds: 
+Any properties that end in an `_at` suffix will be provided in ISO 8601 format in UTC including milliseconds:
 
 `YYYY-MM-DDTHH:MM:SS.mmmZ`
 
@@ -26,11 +26,9 @@ The Cabify API utilizes OAuth 2.0 authentication. For more details, see the [Aut
 
 ### REST and Resources
 
->Each resource path may contain an ID parameter on the end. For example:
+Each resource path may contain an ID parameter on the end.
 
-~~~bash
-GET /api/journeys/09e1bc6081256de35996c69e24435f6f
-~~~
+`GET /api/journeys/09e1bc6081256de35996c69e24435f6f`
 
 The complete Cabify API follows strict REST concepts of resources. A resource is an end-point or URL path on which JSON documents can be created, retrieved, updated, and destroyed using HTTP commands.
 
@@ -67,14 +65,15 @@ The Cabify API does not distinguish collections and single items, each are consi
 - `GET /api/journeys`
 - `GET /api/regions`
 
-To determine the actions that a specific resource supports, you can send an HTTP OPTIONS to the resource URL:
-
-`$ curl -i -X OPTIONS -H "Authentication: ------" https://cabify.com/api/journey`
-
-The response headers should include:
+~~~bash
+$ curl -i -X OPTIONS -H "Authentication: ------" \
+https://cabify.com/api/journey
 
 `HTTP/1.1 204 No Content`
 `Allow: GET, OPTIONS, PATCH, POST, PUT`
+~~~
+
+To determine the actions that a specific resource supports, you can send an HTTP OPTIONS to the resource URL.
 
 ### Error Handling
 
@@ -82,16 +81,22 @@ All error handling via the Cabify API is handled using HTTP status codes. Anythi
 
 #### Syntax and Server Errors
 
-Syntax and server errors will return either a `400 Bad Request` or `50X` responses. Typically they will include a message body provided in text which should not be shown to the end user:
-
-~~~
+~~~bash
 HTTP/1.1 400 Bad Request
 Content-Length: 22
 
 Problems parsing JSON.
 ~~~
 
-#### Resource Not Found
+Syntax and server errors will return either a `400 Bad Request` or `50X` responses. Typically they will include a message body provided in text which should not be shown to the end user:
+
+### Resource Not Found
+~~~bash
+HTTP/1.1 400 Bad Request
+Content-Length: 22
+
+Problems parsing JSON.
+~~~
 
 If the server understands the request but no resource exists at the specific URL using the parameters or ID provided.
 
