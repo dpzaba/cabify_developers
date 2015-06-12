@@ -14,6 +14,7 @@ includes:
 
   - resources/overview
   - resources/journeys/item
+  - resources/journeys/estimate
   - resources/user
 
   - scenarios/overview
