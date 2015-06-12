@@ -198,6 +198,8 @@ html, body {
   // Subheaders are the submenus that slide open
   // in the table of contents.
   .tocify-subheader {
+    display: none;
+
     .tocify-item>a {
       // Styling here for a level 2 nesting.
       padding-left: $nav-padding + $nav-indent * 1;
@@ -206,6 +208,8 @@ html, body {
   }
 
   .tocify-subheader {
+    display: none;
+
     .tocify-subheader {
       .tocify-item>a {
         // Styling here for a level 3 nesting.
@@ -558,7 +562,7 @@ html, body {
     color: #797979;
   }
 
-  pre.shell > code, 
+  pre.shell > code,
   pre.plaintexts > code{
     color: #aaa;
   }
