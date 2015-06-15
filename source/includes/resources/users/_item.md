@@ -8,6 +8,7 @@ POST https://cabify.com/api/user
 
 ~~~bash
 curl https://cabify.com/api/user \
+   -X POST
    -H "Authentication: ------"  \
    -d name=david \
    -d surname=divad \

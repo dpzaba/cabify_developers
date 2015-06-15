@@ -1,9 +1,24 @@
-## Users
+### List users
 
-### The user object
+Returns a list of users in the same account. Returned users will depend on the current user permissions.
+
+
+~~~bash
+GET https://cabify.com/api/users
+~~~
+
+>
+
+~~~bash
+curl https://cabify.com/api/users \
+   -H "Authentication: ------"  \
+~~~
+
+> Example response
 
 ~~~json
-{
+[
+  {
     "_id": "126c77572a178fx963064f5833ab1f0a",
     "org_unit_ids": [],
     "avatar_filename": null,
@@ -124,75 +139,9 @@
     "loyalty_program": null,
     "is_company": false,
     "last_payment_method_id": null
-}
+  },
+  {..},
+  {..},
+  {..}
+]
 ~~~
-
-
-<table class="vertical">
-  <thead>
-    <tr><th colspan="2">ARGUMENTS</th></tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <th>
-        name
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User name
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        surname
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User surname
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        email
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User email
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        password
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User password
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         mobile_cc
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User mobile country code.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         mobile_num
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User mobile number
-      </td>
-    </tr>
-
-  </tbody>
-</table>
