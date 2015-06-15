@@ -16,12 +16,16 @@ $ curl https://cabify.com/api/journeys/charge_codes \
 ~~~json
 [
   {
-    "code": "123",
-    "code": "234",
-    "code": "345"
+    "code": "QWE123",
   },
-  {},
-  {}
+  {
+    "code": "ASD234",
+  },
+  {
+    "code": "ZXC345"
+  },
+  {...},
+  {...}
 ]
 ~~~
 
