@@ -8,6 +8,7 @@ GET https://cabify.com/api/journey/charge_codes
 
 ~~~bash
 $ curl https://cabify.com/api/journey/charge_codes \
+    -X GET \
     -H "Authentication: ------"
 ~~~
 

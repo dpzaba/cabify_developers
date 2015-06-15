@@ -11,6 +11,7 @@ GET https://cabify.com/api/users
 
 ~~~bash
 curl https://cabify.com/api/users \
+    -X GET \
    -H "Authentication: ------"  \
 ~~~
 

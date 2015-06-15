@@ -8,6 +8,7 @@ GET https://cabify.com/api/journey/locations
 
 ~~~bash
 $ curl https://cabify.com/api/journey/locations \
+    -X GET \
     -H "Authentication: ------"
 ~~~
 

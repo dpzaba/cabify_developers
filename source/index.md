@@ -21,6 +21,10 @@ includes:
   - resources/users/overview
   - resources/users/item
   - resources/users/list
+  - resources/password_reset
+  - resources/vehicle_types/overview
+  - resources/vehicle_types/list
+  - resources/taxis/available
 
   - scenarios/overview
   - scenarios/authentication
