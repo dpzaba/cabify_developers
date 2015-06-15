@@ -16,10 +16,10 @@ $ curl https://cabify.com/api/journeys/charge_codes \
 ~~~json
 [
   {
-    "code": "QWE123",
+    "code": "QWE123"
   },
   {
-    "code": "ASD234",
+    "code": "ASD234"
   },
   {
     "code": "ZXC345"
@@ -30,3 +30,22 @@ $ curl https://cabify.com/api/journeys/charge_codes \
 ~~~
 
 Returns an array of charge codes used in the past by the current user.
+
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">ARGUMENTS</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+        code
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Charge code used previously by the current user in another journey.
+      </td>
+    </tr>
+
+  </tbody>
+</table>

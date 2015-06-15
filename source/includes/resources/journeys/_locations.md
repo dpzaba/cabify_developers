@@ -45,3 +45,43 @@ $ curl https://cabify.com/api/journeys/locations \
 ~~~
 
 Returns an array of locations used in the past by the current user.
+
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">ARGUMENTS</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+        name
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Location name
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        city
+        <span class='type'> string </span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Location city
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        loc
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Location coodinates (using <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS84</a>).
+      </td>
+    </tr>
+
+  </tbody>
+</table>
