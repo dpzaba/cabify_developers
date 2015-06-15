@@ -7,7 +7,7 @@ GET https://cabify.com/api/journey/charge_codes
 >
 
 ~~~bash
-$ curl https://cabify.com/api/journeys/charge_codes \
+$ curl https://cabify.com/api/journey/charge_codes \
     -H "Authentication: ------"
 ~~~
 
