@@ -136,6 +136,15 @@
 
     <tr>
       <th>
+        id
+        <span class='type'> string </span>
+      </th>
+      <td>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
         name
         <span class='type'> string </span>
       </th>
@@ -191,6 +200,80 @@
       </th>
       <td>
         User mobile number
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         full_name
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Concatenation of user name and surname.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         mobile
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Concatenation of user mobile country code and number (i.e. +3461111111).
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         country
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Country where the user uses Cabify. Posibilities: 'ES' for
+      Spain, 'PE' for Peru, 'MX' for Mexico, 'CL' for Chile.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         language
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's language. Posibilities: 'es' for spanish or 'en' for english.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         invitation_code
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's invitation code. It is a personal promotional code to
+      share with friends and give them an amount of money to try
+      Cabify for free.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         invitation_url
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's invitation url. Used to share with friends and give
+      them an amount of money to try Cabify for free.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        avatar_url
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's avatar url.
       </td>
     </tr>
 

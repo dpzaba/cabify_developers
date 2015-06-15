@@ -146,7 +146,95 @@ curl https://cabify.com/api/user \
 ~~~
 
 
-Params table: name,  surname, email, mobile_cc, mobile_num, password
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">ARGUMENTS</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+        name
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User name
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        surname
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User surname
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        email
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User email
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        password
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User password
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         mobile_cc
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User mobile country code.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         mobile_num
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User mobile number
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         country
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Country where the user uses Cabify. Posibilities: 'ES' for
+      Spain, 'PE' for Peru, 'MX' for Mexico, 'CL' for Chile.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         language
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's language. Posibilities: 'es' for spanish or 'en' for english.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
 
 ### Request a user
@@ -293,7 +381,24 @@ curl https://cabify.com/api/user \
 
 Retrieves the details of a user that has previously been created. Supply  the unique user ID.
 
-Params table:  id
+
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">ARGUMENTS</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+         id
+        <span class='type'> string </span>
+      </th>
+      <td>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
 
 
 ### Edit a user
@@ -442,4 +547,122 @@ curl https://cabify.com/api/user \
 
 Updates the specified user by setting the values of the parameters passed. Any parameters not provided will be left unchanged.
 
-Params table: name,  surname, email, mobile_cc, mobile_num, password
+
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">ARGUMENTS</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+         id
+        <span class='type'> string </span>
+      </th>
+      <td>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        name
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User name
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        surname
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User surname
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        email
+        <span class='type'> string </span>
+      </th>
+      <td>
+       User email
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        password_current
+        <span class='type'> string </span>
+      </th>
+      <td>
+       Current user password
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        password
+        <span class='type'> string </span>
+      </th>
+      <td>
+       New user password
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        password_confirmation
+        <span class='type'> string </span>
+      </th>
+      <td>
+       New password confirmation
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         mobile_cc
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User mobile country code.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         mobile_num
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User mobile number
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         country
+        <span class='type'> string </span>
+      </th>
+      <td>
+        Country where the user uses Cabify. Posibilities: 'ES' for
+      Spain, 'PE' for Peru, 'MX' for Mexico, 'CL' for Chile.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+         language
+        <span class='type'> string </span>
+      </th>
+      <td>
+        User's language. Posibilities: 'es' for spanish or 'en' for english.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
