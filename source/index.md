@@ -16,6 +16,7 @@ includes:
   - resources/overview
   - resources/journeys/item
   - resources/journeys/estimate
+  - resources/journeys/charge_codes
   - resources/users/overview
   - resources/users/item
   - resources/users/list
