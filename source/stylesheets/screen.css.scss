@@ -414,9 +414,6 @@ html, body {
     border-top: 1px solid $content-border-color;
     padding-top: 2em;
     padding-bottom: 1.2em;
-    @include background-image(
-      linear-gradient(top, rgba(#fff,0.4), rgba(#fff, 0))
-    );
   }
 
   // h2s right after h1s should bump right up
@@ -551,7 +548,7 @@ html, body {
   }
 
   code {
-    background-color: #EAE7E2;
+    background-color: #F9F6F1;
     color: darken($main-text, 10%);
     padding: 3px 6px;
     border-radius: 3px;
@@ -573,21 +570,20 @@ html, body {
   aside {
     padding-top: 1em;
     padding-bottom: 1em;
-    @include text-shadow(0 1px 0 lighten($aside-notice-bg, 15%));
+    padding-left: 2.8em;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
+    text-indent: -1.5em;
 
     &.warning {
       background-color: $aside-warning-bg;
-      @include text-shadow(0 1px 0 lighten($aside-warning-bg, 15%));
+      color: white;    
     }
 
     &.success {
-      background-color: $aside-success-bg;
-      @include text-shadow(0 1px 0 lighten($aside-success-bg, 15%));
-    }
+      background-color: $aside-success-bg;    }
   }
 
   aside:before {

@@ -2,7 +2,7 @@
 
 Cabify uses [OAuth 2.0](http://oauth.net/2/) outlined in [RFC 6749](http://tools.ietf.org/html/rfc6749) to control access to resources on the server via the API.
 
-If you have not used OAuth 2.0 in the past, we recommend reading a few guides. [Digital Ocean's Introduction to OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) and [Aaron Parecki's "OAuth 2 Simplified"](http://aaronparecki.com/articles/2012/07/29/1/oauth2-simplified) are both great resources to get started.
+If you haven't used OAuth 2.0 we recommend reading a few guides. [Digital Ocean's Introduction to OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) and [Aaron Parecki's "OAuth 2 Simplified"](http://aaronparecki.com/articles/2012/07/29/1/oauth2-simplified) are both great resources to get started.
 
 The Cabify API has been designed with three application access scenarios in mind:
 
@@ -32,7 +32,7 @@ Upon successful registration, you'll receive a `client_id` and `secret`. Dependi
 
 If your application is only ever going to be used by yourself, a colleague, or a special Cabify user you created to act as an intermediary, there is no reason to code a full OAuth solution for external users.
 
-We'd expect this scenario to be used by client's who want to automate the ordering of vehicles for their company or for reselling Cabify services. If your situation is the later, please be sure to have told us your intentions so we can double check for any legal implications.
+We'd expect this scenario to be used by clients who want to automate the ordering of vehicles for their company or for reselling Cabify services. If your situation is the later, please be sure to have told us your intentions so we can double check for any legal implications.
 
 The process is simple:
 
@@ -40,7 +40,9 @@ The process is simple:
  2. Extract and save the token from the response object.
  3. Perform requests setting the token in the `Authorization` HTTP header.
 
-**IMPORTANT NOTE**: *Due to potential security implications and unless agreed by Cabify, only the owner of the application defined during registration will be allowed to authenticate using the password grant type.*
+<aside class="warning">
+<strong>Important note</strong>: Due to potential security implications and unless agreed by Cabify, only the owner of the application defined during registration will be allowed to authenticate using the password grant type.
+</aside>
 
 #### Requesting an Authorization Object
 
@@ -61,9 +63,7 @@ Requests should be sent with the following data:
 
 If the request fails, you'll receive a `401 Unauthorized` response including a JSON encoded error message as defined by the OAuth 2.0 RFC:
 
-{% highlight json %}
-{"error":"unauthorized_client"}
-{% endhighlight %}
+`{"error":"unauthorized_client"}`
 
 If successful, the http response will be `200 OK` and you should receive a response similar to:
 
