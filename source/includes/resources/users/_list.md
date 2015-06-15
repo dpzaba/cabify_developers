@@ -1,9 +1,24 @@
-## Users
+### List users
 
-### The user object
+Returns a list of users in the same account. Returned users will depend on the current user permissions.
+
+
+~~~bash
+GET https://cabify.com/api/users
+~~~
+
+>
+
+~~~bash
+curl https://cabify.com/api/users \
+   -H "Authentication: ------"  \
+~~~
+
+> Example response
 
 ~~~json
-{
+[
+  {
     "_id": "126c77572a178fx963064f5833ab1f0a",
     "org_unit_ids": [],
     "avatar_filename": null,
@@ -124,158 +139,9 @@
     "loyalty_program": null,
     "is_company": false,
     "last_payment_method_id": null
-}
+  },
+  {..},
+  {..},
+  {..}
+]
 ~~~
-
-
-<table class="vertical">
-  <thead>
-    <tr><th colspan="2">ARGUMENTS</th></tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <th>
-        id
-        <span class='type'> string </span>
-      </th>
-      <td>
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        name
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User name
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        surname
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User surname
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        email
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User email
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        password
-        <span class='type'> string </span>
-      </th>
-      <td>
-       User password
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         mobile_cc
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User mobile country code.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         mobile_num
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User mobile number
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         full_name
-        <span class='type'> string </span>
-      </th>
-      <td>
-        Concatenation of user name and surname.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         mobile
-        <span class='type'> string </span>
-      </th>
-      <td>
-        Concatenation of user mobile country code and number (i.e. +3461111111).
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         country
-        <span class='type'> string </span>
-      </th>
-      <td>
-        Country where the user uses Cabify. Posibilities: 'ES' for
-      Spain, 'PE' for Peru, 'MX' for Mexico, 'CL' for Chile.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         language
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User's language. Posibilities: 'es' for spanish or 'en' for english.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         invitation_code
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User's invitation code. It is a personal promotional code to
-      share with friends and give them an amount of money to try
-      Cabify for free.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-         invitation_url
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User's invitation url. Used to share with friends and give
-      them an amount of money to try Cabify for free.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        avatar_url
-        <span class='type'> string </span>
-      </th>
-      <td>
-        User's avatar url.
-      </td>
-    </tr>
-
-  </tbody>
-</table>
