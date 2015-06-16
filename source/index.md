@@ -19,14 +19,17 @@ includes:
   - resources/journeys/estimate
   - resources/journeys/charge_codes
   - resources/journeys/locations
+  - resources/journeys/active
+  - resources/journeys/reserved
+  - resources/journeys/terminated
   - resources/users/overview
   - resources/users/item
   - resources/users/list
-  - resources/password_reset
   - resources/vehicle_types/overview
   - resources/vehicle_types/list
   - resources/taxis/overview
   - resources/taxis/available
+  - resources/password_reset
 
   - scenarios/overview
   - scenarios/authentication
