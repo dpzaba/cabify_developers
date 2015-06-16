@@ -247,6 +247,7 @@ GET https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
 
 ~~~bash
 curl https://cabify.com/api/user \
+   -X GET \
    -H "Authentication: ------" \
    -d id=126c77572a178fx963064f5833ab1f0a
 ~~~
