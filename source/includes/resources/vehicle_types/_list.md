@@ -279,7 +279,7 @@ $ curl https://cabify.com/api/vehicle_types \
 }
 ~~~
 
-Xxxx
+List the available vehicle types from a point.
 
 <table class="vertical">
   <thead>
@@ -289,8 +289,8 @@ Xxxx
 
     <tr>
       <th>
-        X
-        <span class='type'> string </span>
+        loc
+        <span class='type'> [Float, Float] </span>
       </th>
       <td>
         Xxx.

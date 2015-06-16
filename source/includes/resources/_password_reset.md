@@ -1,4 +1,4 @@
-### Password reset
+## Password reset
 
 ~~~bash
 POST https://cabify.com/api/password_reset

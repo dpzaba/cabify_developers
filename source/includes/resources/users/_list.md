@@ -142,7 +142,6 @@ curl https://cabify.com/api/users \
     "last_payment_method_id": null
   },
   {..},
-  {..},
   {..}
 ]
 ~~~
