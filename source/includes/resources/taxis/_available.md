@@ -1,13 +1,13 @@
 ### List available taxis
 
 ~~~bash
-GET https://cabify.com/api/taxis?available
+GET https://cabify.com/api/taxis/available
 ~~~
 
 >
 
 ~~~bash
-$ curl https://cabify.com/api/taxis?available \
+$ curl https://cabify.com/api/taxis/available \
     -X GET \
     -d loc[]=40.426187 \
     -d loc[]=-3.7011029999
