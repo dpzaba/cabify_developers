@@ -14,6 +14,7 @@ includes:
   - about/error_handling
 
   - resources/overview
+  - resources/journeys/overview
   - resources/journeys/item
   - resources/journeys/estimate
   - resources/journeys/charge_codes
@@ -24,6 +25,7 @@ includes:
   - resources/password_reset
   - resources/vehicle_types/overview
   - resources/vehicle_types/list
+  - resources/taxis/overview
   - resources/taxis/available
 
   - scenarios/overview
