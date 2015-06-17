@@ -11,7 +11,7 @@ There are two ways of creating a new journey:
 
 ~~~bash
 $ curl https://cabify.com/api/journey \
-    -H "Authentication: ------" \
+    -H "Authorization: ------" \
     -d start_type=asap \
     -d start_loc=[40.42185974121094,-3.707935333251953] \
     -d start_name="Gran Via" \

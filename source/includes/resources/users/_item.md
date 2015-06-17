@@ -8,14 +8,14 @@ POST https://cabify.com/api/user
 
 ~~~bash
 curl https://cabify.com/api/user \
-   -X POST
-   -H "Authentication: ------"  \
-   -d name=david \
-   -d surname=divad \
-   -d email=david@example.com \
-   -d mobile_cc=34 \
-   -d mobile_num=611111111 \
-   -d password=secret
+    -X POST
+    -H "Authorization: ------" \
+    -d name=david \
+    -d surname=divad \
+    -d email=david@example.com \
+    -d mobile_cc=34 \
+    -d mobile_num=611111111 \
+    -d password=secret
 ~~~
 
 > Example response
@@ -247,9 +247,9 @@ GET https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
 
 ~~~bash
 curl https://cabify.com/api/user \
-   -X GET \
-   -H "Authentication: ------" \
-   -d id=126c77572a178fx963064f5833ab1f0a
+    -X GET \
+    -H "Authorization: ------" \
+    -d id=126c77572a178fx963064f5833ab1f0a
 ~~~
 
 
@@ -412,10 +412,10 @@ PATH https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
 
 ~~~bash
 curl https://cabify.com/api/user \
-   -H "Authentication: ------" \
-   -d name=NewName \
-   -d email=NewEmail@example.com
-   -d id=126c77572a178fx963064f5833ab1f0a
+    -H "Authorization: ------" \
+    -d name=NewName \
+    -d email=NewEmail@example.com
+    -d id=126c77572a178fx963064f5833ab1f0a
 ~~~
 
 

@@ -8,8 +8,8 @@ GET https://cabify.com/api/journeys/reserved
 
 ~~~bash
 $ curl https://cabify.com/api/journeys/reserved \
-    -X GET
-    -H "Authentication: ------"
+    -X GET \
+    -H "Authorization: ------"
 ~~~
 
 > Example Response

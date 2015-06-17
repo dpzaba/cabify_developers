@@ -9,7 +9,7 @@ GET https://cabify.com/api/journeys/active
 ~~~bash
 $ curl https://cabify.com/api/journeys/active \
     -X GET
-    -H "Authentication: ------"
+    -H "Authorization: ------"
 ~~~
 
 > Example Response

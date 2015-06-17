@@ -19,6 +19,8 @@ includes:
   - resources/journeys/estimate
   - resources/journeys/charge_codes
   - resources/journeys/locations
+  - resources/journeys/state
+#  - resources/journeys/waypoints
   - resources/journeys/active
   - resources/journeys/reserved
   - resources/journeys/terminated
