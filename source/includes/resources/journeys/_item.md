@@ -21,7 +21,7 @@ $ curl https://cabify.com/api/journey \
 
 > Example Response
 
-~~~bash
+~~~json
 {
     "org_unit_ids": [],
     "region_id": "madrid",

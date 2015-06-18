@@ -97,9 +97,9 @@ Authorization: Bearer 1IIwOxm_32LbIBbamnAg9pJtNstahPvNThkelKDUPCQ
 
 We can test this out again with cURL in this simple request for the user's profile:
 
-{% highlight bash %}
+~~~bash
 $ curl -X GET -H "Authorization: Bearer 1IIwOxm_32LbIBbamnAg9pJtNstahPvNThkelKDUPCQ" https://cabify.com/api/user
-{% endhighlight %}
+~~~
 
 Assuming all okay, you should receive a `200 OK` response with the User's profile in JSON.
 
