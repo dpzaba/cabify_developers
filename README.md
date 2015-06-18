@@ -1,7 +1,7 @@
 Cabify Developer Documentation
 =======
 
-This is a middelman app using [slate](https://github.com/tripit/slate) for Cabify API documentation.
+This is a middleman app using [slate](https://github.com/tripit/slate) for Cabify API documentation.
 
 ### Install and run it
 ```bash
