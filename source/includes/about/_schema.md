@@ -20,6 +20,10 @@ Some resources also provide dates in a local time zone in addition to a regular 
 
 `2012-05-09T13:11:45.000+02:00`
 
+### Locations
+
+All location properties will be provided using the [WGS84 system](https://en.wikipedia.org/wiki/World_Geodetic_System) in an array containing latitude and longitude.
+
 ### Authentication
 
 The Cabify API utilizes OAuth 2.0 authentication. For more details, see the [Authentication page](authentication.html).
@@ -77,4 +81,3 @@ Allow: POST, OPTIONS
 ~~~
 
 To determine the actions that a specific resource supports, you can send an HTTP OPTIONS request to the resource URL.
-

@@ -66,18 +66,20 @@ Returns the current state of a journey.
         <span class='type'> String </span>
       </th>
       <td>
-        State's name. Possibilites: hire, hired, arrived, pick up, drop off, rider cancel, driver cancel or failure. Other states should be ignore until one of the follows arrived.
+        State's name. Possibilites:
 
         <ul>
-            <li>Hire: the system is looking for a driver.</li>
-            <li>Hired: a driver was assigned to the journey.</li>
-            <li>Arrived: the driver is waiting at the pick up location.</li>
-            <li>Pick up: the rider is in the car, the journey starts.</li>
-            <li>Drop Off: the journey ended. </li>
-            <li>Rider cancel: the journey was canceled by the rider.</li>
-            <li>Driver cancel: the journey was canceled by the driver.</li>
-            <li>Failure: there was an issue creating the journey.</li>
+            <li>hire: the system is looking for a driver.</li>
+            <li>hired: a driver was assigned to the journey.</li>
+            <li>arrived: the driver is waiting at the pick up location.</li>
+            <li>pick up: the rider is in the car, the journey starts.</li>
+            <li>drop off: the journey ended. </li>
+            <li>rider cancel: the journey was canceled by the rider.</li>
+            <li>driver cancel: the journey was canceled by the driver.</li>
+            <li>failure: there was an issue creating the journey.</li>
         </ul>
+
+        Other states should be ignore until one of the previous arrives.
       </td>
     </tr>
 
@@ -87,7 +89,7 @@ Returns the current state of a journey.
         <span class='type'>[Float, Float] </span>
       </th>
       <td>
-          Current location of the driver.
+        Array containing latitude and longitude of the driver location.
       </td>
     </tr>
 

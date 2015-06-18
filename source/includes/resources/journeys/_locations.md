@@ -80,7 +80,7 @@ Returns an array of locations used in the past by the current user.
         <span class='type'> string </span>
       </th>
       <td>
-        Location coodinates (using <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS84</a>).
+        Array containing latitude and longitude of previous pick up points and destinations.
       </td>
     </tr>
 
