@@ -10,8 +10,25 @@
      40.4324657,
      -3.6966718
    ],
-  "name": "grp1",
-  "icon": "group"
+  "region_id": "madrid",
+  "vehicle_type_ids": [
+  "c96d7175756797d1c2e99bab9d93ca61",
+  "c96d7175756797d1c2e99bab9d93bc34"
+  ],
+  "name": "Mercedes Clase S",
+  "reg_plate": "111111",
+  "make": null,
+  "model": null,
+  "motor_type": null,
+  "color": "black",
+  "icon": "luxury",
+  "disabled": false,
+  "manufacture_year": null,
+  "updated_at": "2013-02-19T17:21:41.601Z",
+  "created_at": "2012-06-20T14:59:18.844Z",
+  "_rev": "6-3d5298dac9ad4411c185b0ed6f1d8bb1",
+  "type": "Taxi",
+  "request_cost": false
 }
 ~~~
 
@@ -34,6 +51,7 @@
       <th>
         loc
         <span class='type'> [Float, Float] </span>
+        <span class='optional'> optional </span>
       </th>
       <td>
         Xxx.
@@ -44,6 +62,17 @@
       <th>
         name
         <span class='type'> string </span>
+      </th>
+      <td>
+        Xxx.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        reg_plate
+        <span class='type'>reg_plate</span>
+        <span class='optional'> optional </span>
       </th>
       <td>
         Xxx.

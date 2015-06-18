@@ -229,7 +229,7 @@
         <span class='type'> string </span>
       </th>
       <td>
-        Country where the user uses Cabify. Posibilities: 'ES' for
+        Country where the user uses Cabify. Possibilities: 'ES' for
       Spain, 'PE' for Peru, 'MX' for Mexico, 'CL' for Chile.
       </td>
     </tr>
@@ -240,7 +240,7 @@
         <span class='type'> string </span>
       </th>
       <td>
-        User's language. Posibilities: 'es' for spanish or 'en' for english.
+        User's language. Possibilities: 'es' for spanish or 'en' for english.
       </td>
     </tr>
 
