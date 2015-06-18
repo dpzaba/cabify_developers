@@ -141,4 +141,4 @@ $ curl https://cabify.com/api/journeys/reserved \
 ]
 ~~~
 
-List reserved journeys for the current_user as rider. Returns an array of journeys.
+List reserved journeys for the current_user as rider. Returns an array of [journeys](#the-state-object).

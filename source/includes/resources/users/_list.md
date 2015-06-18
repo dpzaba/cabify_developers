@@ -1,6 +1,6 @@
 ### List users
 
-Returns a list of users in the same account. Returned users will depend on the current user permissions.
+Returns a list of [users](#the-user-object) in the same account. Returned users will depend on the current user permissions.
 
 
 ~~~bash

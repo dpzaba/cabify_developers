@@ -23,6 +23,7 @@ includes:
   - resources/journeys/active
   - resources/journeys/reserved
   - resources/journeys/terminated
+  - resources/states/overview
   - resources/users/overview
   - resources/users/item
   - resources/users/list

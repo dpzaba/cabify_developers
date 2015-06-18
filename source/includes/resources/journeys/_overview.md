@@ -6,14 +6,219 @@ https://cabify.com/api/journey
 
 Only logged in users will be allowed to request a journey. The owner will always be taken from the currently logged in user, but journeys can be requested for _anonymous_ riders and other riders with a user in the same account.
 
-### The Journey object
+### The journey object
 
-We need to define what attributes are we going to describe for the journey. Check the json, its a bit too much info, right??
 
-Table Header 1 | Table Header 2
--------------- | --------------
-Row 1 col 1 | Row 2 col 2
-Row 2 col 1 | Row 2 col 2
+<table class="vertical">
+  <thead>
+    <tr><th colspan="2">Attributes</th></tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th>
+        id
+        <span class='type'> string </span>
+      </th>
+      <td>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        start_type
+        <span class='type'> string </span>
+      </th>
+      <td>
+        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation booking for some point in the future.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        start_at
+        <span class='type'>String</span>
+      </th>
+      <td>
+        When the journey should be started in the case of a reservation. Should <b>always</b> be in the local time of the user requesting the journey in ISO 8601 format without any timezone details. Our server will handle timezone conversion. Example: "2014-11-14 13:45".
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        start_name
+        <span class='type'>String</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        Street name of where the passenger would like to be collected.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        start_city
+        <span class='type'>String</span>
+        <span class='optional'> optional</span>
+      </th>
+      <td>
+        City name of pick up location.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        start_loc
+        <span class='type'>[Float, Float]</span>
+      </th>
+      <td>
+        Array containing latitude and longitude of the exact pick up location.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        end_loc
+        <span class='type'>[Float, Float] </span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        Array containing latitude and longitude of the approximate destination.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        end_name
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Street name of where the passenger would like to be dropped off.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        end_city
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        City name of destination.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        end_at
+        <span class='type'>String</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        When the journey is terminated.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        end_state
+        <span class='type'>String</span>
+      </th>
+      <td>
+        Name of the last <a href="#the-state-object">state</a> of the journey.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        total_formatted
+        <span class='type'>String</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        Formatted price of the journey after discounts and extras (the journey should be ended).
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        distance
+        <span class='type'>Integer</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        Distance of the journey in meters (the journey should be ended).
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        duration
+        <span class='type'>Integer</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        Duration of the journey in seconds (the journey should be ended).
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        message
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Message to include in the request for the driver.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        charge_code
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Only relevant for users who require charge codes to be associated with each journey. Some corporate accounts require this value to be provided with a specific format.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        rider
+        <span class='type'>Object</span>
+      </th>
+      <td>
+        <a href="#the-user-object">Rider</a> associated with the journey.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        driver
+        <span class='type'>Object</span>
+        <span class='optional'> optional </span>
+      </th>
+      <td>
+        <a href="#the-user-object">Driver</a> associated with the journey.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        vehicle_type
+        <span class='type'>Object</span>
+      </th>
+      <td>
+        <a href="#the-vehicle-type-object">Vehicle type</a> associated with the journey.
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
 
 ~~~json
 {
@@ -69,7 +274,7 @@ Row 2 col 1 | Row 2 col 2
     "arrived_at": "2015-02-06T21:04:37.960Z",
     "pick_up_at": "2015-02-06T21:04:39.304Z",
     "drop_off_at": "2015-02-06T21:04:41.411Z",
-    "terminated_at": "2014-10-23T09:31:00.817Z",
+    "terminated_at": "2015-10-23T09:31:00.817Z",
     "priced_at": null,
     "currency": "EUR",
     "supplements": [],

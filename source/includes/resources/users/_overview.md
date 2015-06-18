@@ -130,7 +130,7 @@
 
 <table class="vertical">
   <thead>
-    <tr><th colspan="2">ARGUMENTS</th></tr>
+    <tr><th colspan="2">Attributes</th></tr>
   </thead>
   <tbody>
 

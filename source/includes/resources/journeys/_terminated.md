@@ -141,7 +141,7 @@ $ curl https://cabify.com/api/journeys/terminated \
 ]
 ~~~
 
-List terminated journeys for the current_user as rider (if not specified rider_id) and only for the last 30 days. Returns an array of journeys.
+List terminated journeys for the current_user as rider (if not specified rider_id) and only for the last 30 days. Returns an array of [journeys](#the-state-object).
 
 <table class="vertical">
   <thead>

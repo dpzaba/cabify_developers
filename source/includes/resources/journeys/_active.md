@@ -141,4 +141,4 @@ $ curl https://cabify.com/api/journeys/active \
 ]
 ~~~
 
-List active journeys for the current_user as rider. Returns an array of journeys.
+List active journeys for the current_user as rider. Returns an array of [journeys](#the-journey-object).

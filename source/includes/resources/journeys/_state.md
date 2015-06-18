@@ -52,46 +52,4 @@ $ curl  https://cabify.com/api/journey/2ce31633e11dde7a3058f181a4c8a910/state \
 }
 ~~~
 
-Returns the current state of a journey.
-
-<table class="vertical">
-  <thead>
-    <tr><th colspan="2">ARGUMENTS</th></tr>
-  </thead>
-  <tbody>
-
-    <tr>
-      <th>
-        name
-        <span class='type'> String </span>
-      </th>
-      <td>
-        State's name. Possibilites:
-
-        <ul>
-            <li>hire: the system is looking for a driver.</li>
-            <li>hired: a driver was assigned to the journey.</li>
-            <li>arrived: the driver is waiting at the pick up location.</li>
-            <li>pick up: the rider is in the car, the journey starts.</li>
-            <li>drop off: the journey ended. </li>
-            <li>rider cancel: the journey was canceled by the rider.</li>
-            <li>driver cancel: the journey was canceled by the driver.</li>
-            <li>failure: there was an issue creating the journey.</li>
-        </ul>
-
-        Other states should be ignore until one of the previous arrives.
-      </td>
-    </tr>
-
-    <tr>
-      <th>
-        loc
-        <span class='type'>[Float, Float] </span>
-      </th>
-      <td>
-        Array containing latitude and longitude of the driver location.
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+Returns the current [state](#the-state-object) of a journey.
