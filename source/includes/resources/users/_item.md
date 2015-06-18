@@ -246,10 +246,9 @@ GET https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
 >
 
 ~~~bash
-curl https://cabify.com/api/user \
+curl https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a \
     -X GET \
-    -H "Authorization: ------" \
-    -d id=126c77572a178fx963064f5833ab1f0a
+    -H "Authorization: ------"
 ~~~
 
 
@@ -405,17 +404,17 @@ Retrieves the details of a user that has previously been created. Supply  the un
 ### Edit a user
 
 ~~~bash
-PATH https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
+PATCH https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a
 ~~~
 
 >
 
 ~~~bash
-curl https://cabify.com/api/user \
+curl https://cabify.com/api/user/126c77572a178fx963064f5833ab1f0a \
+    -X PATCH \
     -H "Authorization: ------" \
     -d name=NewName \
     -d email=NewEmail@example.com
-    -d id=126c77572a178fx963064f5833ab1f0a
 ~~~
 
 

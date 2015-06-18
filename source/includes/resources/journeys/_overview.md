@@ -153,7 +153,7 @@ Only logged in users will be allowed to request a journey. The owner will always
         <span class='type'> string </span>
       </th>
       <td>
-        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation booking for some point in the future.
+        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation for some point in the future.
       </td>
     </tr>
 
@@ -206,7 +206,7 @@ Only logged in users will be allowed to request a journey. The owner will always
         <span class='optional'> optional </span>
       </th>
       <td>
-        Array containing latitude and longitude of the approximate destination.
+        Array containing latitude and longitude of the destination.
       </td>
     </tr>
 

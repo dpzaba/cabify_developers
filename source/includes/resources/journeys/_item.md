@@ -11,6 +11,7 @@ There are two ways of creating a new journey:
 
 ~~~bash
 $ curl https://cabify.com/api/journey \
+    -X PUT \
     -H "Authorization: ------" \
     -d start_type=asap \
     -d start_loc=[40.42185974121094,-3.707935333251953] \
@@ -159,7 +160,7 @@ The request body should be provided as JSON and using a combination of the follo
         <span class='type'> string </span>
       </th>
       <td>
-        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation booking for some point in the future.
+        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation for some point in the future.
       </td>
     </tr>
     <tr>
@@ -217,7 +218,7 @@ The request body should be provided as JSON and using a combination of the follo
         <span class='optional'>optional</span>
       </th>
       <td>
-        Array containing latitude and longitude of the approximate destination.
+        Array containing latitude and longitude of the destination.
       </td>
     </tr>
     <tr>

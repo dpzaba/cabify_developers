@@ -9,6 +9,7 @@ Returns the price of a journey. The price would be returned in the local currenc
 
 ~~~bash
 $ curl https://cabify.com/api/journeys/estimate \
+    -X POST \
     -H "Authorization: ------" \
     -d start_type=asap \
     -d start_loc=[40.42185974121094,-3.707935333251953] \
