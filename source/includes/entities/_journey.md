@@ -1,12 +1,6 @@
-## Journeys
+## Journey
 
-~~~
-https://cabify.com/api/journey
-~~~
-
-Only logged in users will be allowed to request a journey. The owner will always be taken from the currently logged in user, but journeys can be requested for _anonymous_ riders and other riders with a user in the same account.
-
-### The journey object
+Journeys are the core of everything we do at Cabify. They contain all the data required for a driver to head towards a pickup location, pick-up the correct rider, and carry them to their destination. They handle the price calculations and estimates.
 
 ~~~json
 {
@@ -131,29 +125,27 @@ Only logged in users will be allowed to request a journey. The owner will always
 }
 ~~~
 
-
 <table class="vertical">
   <thead>
     <tr><th colspan="2">Attributes</th></tr>
   </thead>
   <tbody>
-
     <tr>
       <th>
         id
         <span class='type'> string </span>
       </th>
       <td>
+        Object ID.
       </td>
     </tr>
-
     <tr>
       <th>
         start_type
         <span class='type'> string </span>
       </th>
       <td>
-        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation for some point in the future.
+        The type of journey to start, either: <code>asap</code> for on demand journeys or <code>reserve</code> for a reservation at some point in the future.
       </td>
     </tr>
 
@@ -161,6 +153,7 @@ Only logged in users will be allowed to request a journey. The owner will always
       <th>
         start_at
         <span class='type'>String</span>
+        <span class='optional'> required when <code>start_type</code> is <code>reserve</code></span>
       </th>
       <td>
         When the journey should be started in the case of a reservation. Should <b>always</b> be in the local time of the user requesting the journey in ISO 8601 format without any timezone details. Our server will handle timezone conversion. Example: "2014-11-14 13:45".
@@ -171,24 +164,21 @@ Only logged in users will be allowed to request a journey. The owner will always
       <th>
         start_name
         <span class='type'>String</span>
-        <span class='optional'> optional </span>
       </th>
       <td>
-        Street name of where the passenger would like to be collected.
+        Street name of where the passenger would like to be picked up from.
       </td>
     </tr>
-
     <tr>
       <th>
         start_city
         <span class='type'>String</span>
-        <span class='optional'> optional</span>
+        <span class='optional'>optional, but preferred</span>
       </th>
       <td>
         City name of pick up location.
       </td>
     </tr>
-
     <tr>
       <th>
         start_loc
@@ -198,7 +188,6 @@ Only logged in users will be allowed to request a journey. The owner will always
         Array containing latitude and longitude of the exact pick up location.
       </td>
     </tr>
-
     <tr>
       <th>
         end_loc
@@ -231,6 +220,37 @@ Only logged in users will be allowed to request a journey. The owner will always
         City name of destination.
       </td>
     </tr>
+    <tr>
+      <th>
+        vehicle_type_id
+        <span class='type'>String</span>
+      </th>
+      <td>
+        ID of the vehicle type that the journey should search for.
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        message
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Message to include in the request for the driver.
+      </td>
+    </tr>
+    <tr>
+      <th>
+        charge_code
+        <span class='type'>String</span>
+        <span class='optional'>optional</span>
+      </th>
+      <td>
+        Only relevant for users who require charge codes to be associated with each journey. Some corporate accounts require this value to be provided with a specific format.
+      </td>
+    </tr>
+
 
     <tr>
       <th>
@@ -239,7 +259,7 @@ Only logged in users will be allowed to request a journey. The owner will always
         <span class='optional'> optional </span>
       </th>
       <td>
-        When the journey is terminated.
+        When exactly the rider arrived at their destination and the journey ended.
       </td>
     </tr>
 

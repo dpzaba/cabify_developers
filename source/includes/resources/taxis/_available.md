@@ -1,10 +1,5 @@
-### List available taxis
 
-~~~bash
-GET https://cabify.com/api/taxis/available
-~~~
-
->
+## Available Taxis
 
 ~~~bash
 $ curl https://cabify.com/api/taxis/available \
@@ -13,50 +8,15 @@ $ curl https://cabify.com/api/taxis/available \
     -d loc[]=-3.7011029999
 ~~~
 
-> Example Response
-
-~~~json
-[
-    {
-        "_id": "4f0a4f64205e0761d8471e58f371263f",
-        "loc": [
-            40.4324657,
-            -3.6966718
-        ],
-        "name": "grp1",
-        "icon": "group"
-    },
-    {
-        "_id": "4f0a4f64205e0761d8471e58f3713387",
-        "loc": [
-            40.4436654,
-            -3.6951671
-        ],
-        "name": "lite1",
-        "icon": "lite"
-    },
-    {
-        "_id": "4f0a4f64205e0761d8471e58f371456e",
-        "loc": [
-            40.4437308,
-            -3.6945663
-        ],
-        "name": "lux1",
-        "icon": "luxury"
-    },
-    {...},
-    {...}
-]
-~~~
+`https://cabify.com/api/taxis/available`
 
 List the available taxis around a given point. Returns an array of taxis.
 
 <table class="vertical">
   <thead>
-    <tr><th colspan="2">ARGUMENTS</th></tr>
+    <tr><th colspan="2">QUERY PARAMETERS</th></tr>
   </thead>
   <tbody>
-
     <tr>
       <th>
         loc
@@ -66,6 +26,5 @@ List the available taxis around a given point. Returns an array of taxis.
         Xxx.
       </td>
     </tr>
-
   </tbody>
 </table>

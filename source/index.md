@@ -13,26 +13,26 @@ includes:
   - about/schema
   - about/error_handling
 
+  - entities/overview
+  - entities/journey
+  - entities/user
+  - entities/location
+  - entities/vehicle_type
+  - entities/state
+
   - resources/overview
-  - resources/journeys/overview
   - resources/journeys/item
   - resources/journeys/estimate
   - resources/journeys/state
-  - resources/journeys/charge_codes
-  - resources/journeys/locations
   - resources/journeys/active
   - resources/journeys/reserved
   - resources/journeys/terminated
-  - resources/states/overview
-  - resources/users/overview
   - resources/users/item
   - resources/users/list
-  - resources/vehicle_types/overview
-  - resources/vehicle_types/list
-  - resources/taxis/overview
   - resources/taxis/available
   - resources/password_reset
-  - resources/websocket
+
+  - websocket
 
   - scenarios/overview
   - scenarios/authentication

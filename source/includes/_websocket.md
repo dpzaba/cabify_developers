@@ -1,4 +1,6 @@
-## Real time state
+# Web Socket
+
+## States
 
 > The URL to which to connect:
 
@@ -28,3 +30,4 @@ To start receiving data from Cabify, you should listen two events in the websock
 When the connection is ready to send and receive data (onopen) your first message should be a string containing a json object with the token_type and access_token from the [OAuth authorization object](#authentication39).
 
 Once the server authorize the connection you will start receiving [state](#states) events in real time from a journey. All messages without "event": "state" should be discarded.
+

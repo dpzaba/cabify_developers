@@ -1,7 +1,4 @@
-## Taxis
-
-
-### The taxi object
+## Taxi
 
 ~~~json
 {

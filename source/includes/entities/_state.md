@@ -1,6 +1,4 @@
-## States
-
-### The state object
+## State
 
 ~~~json
 {

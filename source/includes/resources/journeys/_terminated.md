@@ -1,10 +1,6 @@
-### List terminated journeys
+## Terminated Journeys
 
-~~~bash
-GET https://cabify.com/api/journeys/terminated
-~~~
-
->
+`https://cabify.com/api/journeys/terminated`
 
 ~~~bash
 $ curl https://cabify.com/api/journeys/terminated \
