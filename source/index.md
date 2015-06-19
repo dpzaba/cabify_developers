@@ -17,9 +17,9 @@ includes:
   - resources/journeys/overview
   - resources/journeys/item
   - resources/journeys/estimate
+  - resources/journeys/state
   - resources/journeys/charge_codes
   - resources/journeys/locations
-  - resources/journeys/state
   - resources/journeys/active
   - resources/journeys/reserved
   - resources/journeys/terminated
@@ -32,6 +32,7 @@ includes:
   - resources/taxis/overview
   - resources/taxis/available
   - resources/password_reset
+  - resources/websocket
 
   - scenarios/overview
   - scenarios/authentication
