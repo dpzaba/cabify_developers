@@ -1,4 +1,3 @@
-
 ## Available Taxis
 
 ~~~bash
@@ -23,7 +22,7 @@ List the available taxis around a given point. Returns an array of taxis.
         <span class='type'> [Float, Float] </span>
       </th>
       <td>
-        Xxx.
+        Array containing latitude and longitude of the location to search for available taxis.
       </td>
     </tr>
   </tbody>
